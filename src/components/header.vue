@@ -10,7 +10,7 @@
             </b-navbar-item>
         </template>
         <template #start>
-            <b-navbar-item href="#">
+            <b-navbar-item href="https://jorgedipra.blogspot.com/" target="_blank">
                 <b-icon pack="fab" icon="blogger-b" type="is-navis-danger"></b-icon>    
                 <label class="item-nav">Blog</label>
             </b-navbar-item>
