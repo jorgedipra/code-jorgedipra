@@ -15,28 +15,32 @@
         <div class="media-content">
           <p class="title is-4">Jorge Diaz</p>
           <p class="subtitle is-6">@jorgedipra</p>
-            <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://jorgedipra.github.io/" data-a2a-title="jorgedipra">
-              <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-              <a class="a2a_button_facebook"></a>
-              <a class="a2a_button_linkedin"></a>
-              <a class="a2a_button_twitter"></a>
-              <a class="a2a_button_google_gmail"></a>
-            </div>
+          <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://jorgedipra.github.io/"
+            data-a2a-title="jorgedipra">
+            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_linkedin"></a>
+            <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_google_gmail"></a>
+          </div>
         </div>
         <p class="is-4">
-            <b-icon pack="fas" icon="briefcase" type="is-navis-danger"></b-icon>
-            Desarrollador Master en Cerlalc- Unesco. <br>
-            <b-icon pack="fas" icon="street-view" type="is-navis-danger"></b-icon>  
-            Bogotá, Colombia<br>
-            <span class="is-right">
-              <b-button type="is-dark" size="is-medium" tag="a"
-                href="https://github.com/jorgedipra/jorgedipra.github.io"
-                target="_blank" expanded>
-              <b-icon pack="fab" icon="github" type="is-navis-danger"></b-icon>
-              &nbsp;Repositorio
-            </b-button> 
-            </span>
-            
+          <b-icon pack="fas" icon="briefcase" type="is-navis-danger"></b-icon>
+          Desarrollador Master en Cerlalc- Unesco. <br>
+          <b-icon pack="fas" icon="street-view" type="is-navis-danger"></b-icon>
+          Bogotá, Colombia<br>
+          <span class="is-right">
+            <b-button type="is-dark" size="is-medium" tag="a" href="https://github.com/jorgedipra/jorgedipra.github.io"
+              target="_blank" expanded>
+              <span class="icon-text">
+                <span class="icon">
+                  <b-icon pack="fab" icon="github" type="is-navis-danger"></b-icon>
+                </span>
+                <span>Repositorio</span>
+              </span>
+            </b-button>
+          </span>
+
         </p>
       </div>
       <hr>
@@ -44,7 +48,8 @@
         <div class="card">
           <div class="card-content">
             <p class="title">
-              “La mayoría de la gente piensa que el diseño es una chapa, es una simple decoración. Para mí, nada es más importante en el futuro que el diseño. El diseño es el alma de todo lo creado por el hombre.”
+              “La mayoría de la gente piensa que el diseño es una chapa, es una simple decoración. Para mí, nada es más
+              importante en el futuro que el diseño. El diseño es el alma de todo lo creado por el hombre.”
             </p>
             <p class="subtitle">
               Steve Jobs
@@ -81,7 +86,7 @@
 export default {
   name: 'CompHome',
   mounted() {
-   //AddToAny BEGIN
+    //AddToAny BEGIN
     var a2a_config = a2a_config || {};
     a2a_config.locale = "es";
     var script = document.createElement('script');
@@ -93,12 +98,12 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 a {
   color: #42b983;
 }
-.image img.is-rounded{
+
+.image img.is-rounded {
   background: #2196F3;
 }
 </style>

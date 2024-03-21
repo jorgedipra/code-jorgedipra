@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
-// Importa los componentes que usarás en tus rutas
-import Home from './App.vue';
-// import Blog from './components/Home.vue';
+import Home from './views/SeccionHome.vue'; // Importa el componente de la página principal
+import Contacto from './views/SeccionContacto.vue'; // Importa el componente de contacto
+
 
 const routes = [
-  { path: '/', component: Home },
-//   { path: '/about', component: Blog }
+  { path: '/', name: 'home', component: Home }, // Ruta para la página principal
+  { path: '/contacto', name: 'contacto', component: Contacto } // Ruta para la página de contacto
 ];
 
 const router = createRouter({
