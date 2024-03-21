@@ -15,7 +15,7 @@
                     <span>Blog</span>
                 </span>
             </b-navbar-item>
-            <b-navbar-item href="#">
+            <b-navbar-item href="#" id="portafolioLink">
                 <span class="icon-text">
                     <span class="icon">
                         <b-icon pack="fas" icon="folder" type="is-navis-danger"></b-icon>
@@ -31,7 +31,7 @@
                     <span>Certificados</span>
                 </span>
             </b-navbar-item>
-            <b-navbar-item href="/Contacto">
+            <b-navbar-item href="#" id="contactoLink">
                 <span class="icon-text">
                     <span class="icon">
                         <b-icon pack="fas" icon="envelope" type="is-navis-danger"></b-icon>
@@ -51,11 +51,37 @@
             </b-navbar-item>
         </template>
     </b-navbar>
+    <button @click="goToTop" id="goToTopBtn" title="Ir Arriba">
+        <span class="icon is-medium">
+            <i class="fas fa-arrow-up fa-2x"></i>
+        </span>
+    </button>
 </template>
 
 <script>
 export default {
     name: 'CompHeader',
+    mounted() {
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            var goToTopBtn = document.getElementById("goToTopBtn");
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                goToTopBtn.style.display = "block";
+            } else {
+                goToTopBtn.style.display = "none";
+            }
+        }
+
+
+    },
+    methods: {
+        goToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    }
 }
 </script>
 
@@ -78,5 +104,23 @@ nav {
 
 span.icon.has-text-navis-danger {
     color: #E91E63;
+}
+
+button#goToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #E91E63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+button#goToTopBtn:hover {
+    background-color: #8bc34a;
 }
 </style>
