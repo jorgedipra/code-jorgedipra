@@ -17,7 +17,7 @@
         <hr>
         <div class="columns">
             <div class="column is-1"></div>
-            <div class="column is-5">
+            <div class="column is-4">
                 <div class="columns is-mobile is-multiline is-centered">
                     <div class="column is-narrow">
                         <div class="bd-notification is-primary has-text-centered">
@@ -70,12 +70,15 @@
                 </div>
 
             </div>
-            <div class="column is-1"></div>
-            <div class="column is-5">
-                <h2 class="subtitle">Enviame un Mensaje</h2>
-                <iframe src="http://es.foxyform.com/form.php?id=327257&amp;sec_hash=9479aa9f756" width="350px"
-                    height="427px" style="border: none;" frameborder="0" allow="autoplay 'self'; fullscreen 'self'"
-                    data-ruffle-polyfilled=""></iframe>
+            <div class="column is-7">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSexIeSAvhNR0FkprGsVgoO3mlRnw-y_CPy2IOh0GbV-iHfJuQ/viewform?embedded=true"
+                    width="640" height="800" frameborder="0" marginheight="0" marginwidth="0"
+                    style="border: none; overflow: hidden;" allow="autoplay 'self'; fullscreen 'self'"
+                    data-ruffle-polyfilled="">
+                    Cargando…
+                </iframe>
+
             </div>
         </div>
     </div>
@@ -84,17 +87,17 @@
 <script>
 
 export default {
-  mounted() {
-    document.addEventListener('DOMContentLoaded', function() {
-    var contactoLink = document.getElementById('contactoLink');
+    mounted() {
+        document.addEventListener('DOMContentLoaded', function () {
+            var contactoLink = document.getElementById('contactoLink');
 
-    contactoLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Evita que el enlace realice la acción por defecto
+            contactoLink.addEventListener('click', function (event) {
+                event.preventDefault(); // Evita que el enlace realice la acción por defecto
 
-        var contactoSection = document.getElementById('contacto');
-        contactoSection.scrollIntoView({ behavior: 'smooth' }); // Desplaza suavemente hasta la sección de contacto
-    });
-});
+                var contactoSection = document.getElementById('contacto');
+                contactoSection.scrollIntoView({ behavior: 'smooth' }); // Desplaza suavemente hasta la sección de contacto
+            });
+        });
 
     }
 }
