@@ -16,29 +16,27 @@
         </div>
         <hr>
         <div class="columns">
-            <div class="column is-1"></div>
-            <div class="column is-10">
+            <div class="column is-12">
                 <div class="columns is-mobile is-multiline is-centered">
 
-                    <div class="column is-narrow" v-for="index in 2" :key="index">
-                        <article class="tablet" :style="{ 'background-image': 'url(' + imageUrl1 + ')' }">
-                            <aside class="imgLogo" :style="{ 'background-image': 'url(' + imageUrl1_1 + ')' }">
+                    <div class="column is-narrow" v-for="(articulo, index) in datos.articulos" :key="index">
+                        <article class="tablet" :style="{ 'background-image': 'url(' + articulo.imageUrl + ')' }">
+                            <aside class="imgLogo" :style="{ 'background-image': 'url(' + articulo.imageUrl_1 + ')' }">
                             </aside>
                             <div class="text">
-                                <h5>{{ titulo1 }}</h5>
-                                <h2><a :href="externalLink1" target="_blank">{{ linkText1 }}</a></h2>
-                                <h4><a :href="externalLink1_1" target="_blank">{{ linkText1_1 }}</a></h4>
+                                <h5>{{ articulo.titulo }}</h5>
+                                <h2><a :href="articulo.externalLink" target="_blank">{{ articulo.linkText }}</a></h2>
+                                <h4><a :href="articulo.externalLink_1" target="_blank">{{ articulo.linkText_1 }}</a>
+                                </h4>
                             </div>
                             <span class="fondo-1"></span>
                             <span class="fondo-4" style="background-color: #8BC34A"></span>
                             <span class="fondo-3" style="border-top: 130px solid #8BC34A"></span>
                         </article>
                     </div>
+
                 </div>
-
             </div>
-
-            <div class="column is-1"></div>
         </div>
     </div>
 </template>
@@ -48,16 +46,15 @@
 export default {
     data() {
         return {
-            titulo1: "Cursos",
-            linkText1: "La Unidad", // Texto del enlace
-            linkText1_1: "ugpp.cifooiss.org", // Texto del enlace
-            imageUrl1: require('../assets/portafolio/page/LaUnidad.png'), // Ruta de la imagen
-            imageUrl1_1: require('../assets/portafolio/logo/LaUnidad.png'), // Ruta de la imagen
-            externalLink1: "https://web.archive.org/web/20180825151548/http://ugpp.cifooiss.org/", // Ruta de la URL
-            externalLink1_1: "https://web.archive.org/web/20180825151548/http://ugpp.cifooiss.org/", // Ruta de la URL
-        };
+            datos: {}
+        }
     },
     mounted() {
+        fetch('./data.json')
+            .then(response => response.json())
+            .then(data => this.datos = data)
+            .catch(error => console.error('Error al cargar los datos:', error));
+
         document.addEventListener('DOMContentLoaded', function () {
             var portafolioLink = document.getElementById('portafolioLink');
 
@@ -191,5 +188,9 @@ div {
     position: absolute;
     width: 0;
     z-index: 0;
+}
+
+.is-narrow {
+    padding: 5px !important;
 }
 </style>

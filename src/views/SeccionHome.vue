@@ -1,7 +1,9 @@
 <template>
     <div class="container is-widescreen">
       <CompHome></CompHome>
+      <br><br>
       <CompPorta></CompPorta>
+      <br><br>
       <CompContat></CompContat>
     </div>
 </template>

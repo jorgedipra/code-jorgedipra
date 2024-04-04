@@ -18,6 +18,7 @@
         <div class="columns">
             <div class="column is-1"></div>
             <div class="column is-4">
+                <div><br><br></div>
                 <div class="columns is-mobile is-multiline is-centered">
                     <div class="column is-narrow">
                         <div class="bd-notification is-primary has-text-centered">
