@@ -19,7 +19,7 @@
             <div class="column is-12">
                 <div class="columns is-mobile is-multiline is-centered">
 
-                    <div class="column is-narrow" v-for="(articulo, index) in datos.articulos" :key="index">
+                    <div class="column is-narrow card-row" v-for="(articulo, index) in datos.articulos" :key="index">
                         <article class="tablet" :style="{ 'background-image': 'url(' + articulo.imageUrl + ')' }">
                             <aside class="imgLogo" :style="{ 'background-image': 'url(' + articulo.imageUrl_1 + ')' }">
                             </aside>
@@ -190,7 +190,7 @@ div {
     z-index: 0;
 }
 
-.is-narrow {
+.card-row {
     padding: 5px !important;
 }
 </style>

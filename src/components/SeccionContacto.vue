@@ -68,6 +68,23 @@
                             </p>
                         </div>
                     </div>
+                    <div class="column is-narrow">
+                        <div class="bd-notification is-primary has-text-centered">
+                            <i class="fab fa-stack-overflow fab-5x fab-lg"></i>
+                            <p class="block">
+                                Jorgedipra
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column is-narrow">
+    <div class="bd-notification is-primary has-text-centered">
+        <i class="fab fa-codepen fab-5x fab-lg"></i>
+        <p class="block">
+            Jorgedipra
+        </p>
+    </div>
+</div>
+
                 </div>
 
             </div>
