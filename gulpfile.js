@@ -24,7 +24,12 @@ gulp.task('edit-index', function () {
 
 // Tarea para mover archivos existentes de ./dist/* a ../page/*
 gulp.task('move-files', function () {
-    return gulp.src(['./dist/**/*', '!./dist/img/**'])// Ruta de origen
+    return gulp.src(['./dist/**/*', // Ruta de origen
+    //carpetas excluidas:
+    '!./dist/img/**', 
+    '!./dist/fonts/**', 
+    '!./dist/favicon.ico']
+)
         .pipe(rename(function (path) {
             // Cambia el directorio base a ../page/
             path.dirname = '../page/' + path.dirname;
