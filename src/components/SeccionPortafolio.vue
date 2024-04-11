@@ -4,14 +4,14 @@
         <div class="columns">
             <div class="column is-1"></div>
             <div class="column">
-                <h1 class="title">
+                <h2 class="title">
                     <span class="icon-text">
                         <span class="icon">
                             <b-icon pack="fas" icon="folder" type="is-navis-danger"></b-icon>
                         </span>
                         <span>Portafolio</span>
                     </span>
-                </h1>
+                </h2>
             </div>
         </div>
         <hr>

@@ -13,8 +13,8 @@
           </figure>
         </div>
         <div class="media-content">
-          <p class="title is-4">Jorge Diaz</p>
-          <p class="subtitle is-6">@jorgedipra</p>
+          <h1 class="title is-4">Jorge Diaz</h1>
+          <h2 class="subtitle is-6">@jorgedipra</h2>
           <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://jorgedipra.github.io/"
             data-a2a-title="jorgedipra">
             <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
