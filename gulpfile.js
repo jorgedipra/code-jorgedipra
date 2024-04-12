@@ -17,7 +17,7 @@ gulp.task('run-prod', function (cb) {
 gulp.task('edit-index', function () {
     return gulp.src('./dist/index.html') // Ruta al archivo index.html
         .pipe(replace(/<title>.*<\/title>/g, function (match) {
-            return match + '\n<meta name="description" content="Explora mi web personal para obtener información detallada sobre mi experiencia, habilidades y proyectos pasados. Descubre cómo puedo ayudarte en tu próximo proyecto. ¡Contáctame hoy para empezar!">';
+            return match + '\n<meta name="description" content="Explora mi web personal para obtener información detallada sobre mi experiencia, habilidades y proyectos pasados.">';
         }))
         .pipe(gulp.dest('./dist/')); // Ruta de destino del archivo editado
 });
