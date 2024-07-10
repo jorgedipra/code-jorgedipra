@@ -20,71 +20,87 @@
             <div class="column is-4">
                 <div><br><br></div>
                 <div class="columns is-mobile is-multiline is-centered">
-                    <div class="column is-narrow">
-                        <div class="bd-notification is-primary has-text-centered">
-                            <i class="fab fa-facebook fab-lg"></i>
-                            <p class="block">
-                                Jorgedipra
-                            </p>
+                    <a class='LinkContat' :href='"https://www.facebook.com/jorgedipra"' target="_blank">
+                        <div class="column is-narrow">
+                            <div class="bd-notification is-primary has-text-centered">
+                                <i class="fab fa-facebook fab-lg"></i>
+                                <p class="block">
+                                    Jorgedipra
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="column is-narrow">
-                        <div class="bd-notification is-primary has-text-centered">
-                            <i class="fab fa-twitter fab-5x fab-lg"></i>
-                            <p class="block">
-                                @Jorgedipra
-                            </p>
+                    </a>
+                    <a class='LinkContat' :href='"https://x.com/jorgedipra"' target="_blank">
+                        <div class="column is-narrow">
+                            <div class="bd-notification is-primary has-text-centered">
+                                <i class="fab fa-twitter fab-5x fab-lg"></i>
+                                <p class="block">
+                                    @Jorgedipra
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="column is-narrow">
-                        <div class="bd-notification is-primary has-text-centered">
-                            <i class="fab fa-github-alt fab-5x fab-lg"></i>
-                            <p class="block">
-                                Jorgedipra
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column is-narrow">
-                        <div class="bd-notification is-primary has-text-centered">
-                            <i class="fab fa-linkedin fab-5x fab-lg"></i>
-                            <p class="block">
-                                Jorgedipra
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column is-narrow">
-                        <div class="bd-notification is-primary has-text-centered">
-                            <i class="fab fa-youtube fab-5x fab-lg"></i>
-                            <p class="block">
-                                Jorgedipra
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column is-narrow">
-                        <div class="bd-notification is-primary has-text-centered">
-                            <i class="fab fa-bitbucket fab-5x fab-lg"></i>
-                            <p class="block">
-                                Jorgedipra
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column is-narrow">
-                        <div class="bd-notification is-primary has-text-centered">
-                            <i class="fab fa-stack-overflow fab-5x fab-lg"></i>
-                            <p class="block">
-                                Jorgedipra
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column is-narrow">
-    <div class="bd-notification is-primary has-text-centered">
-        <i class="fab fa-codepen fab-5x fab-lg"></i>
-        <p class="block">
-            Jorgedipra
-        </p>
-    </div>
-</div>
+                    </a>
 
+                    <a class='LinkContat' :href='"https://github.com/jorgedipra/"' target="_blank">
+                        <div class="column is-narrow">
+                            <div class="bd-notification is-primary has-text-centered">
+                                <i class="fab fa-github-alt fab-5x fab-lg"></i>
+                                <p class="block">
+                                    Jorgedipra
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class='LinkContat' :href='"https://www.linkedin.com/in/jorgedipra/"' target="_blank">
+                        <div class="column is-narrow">
+                            <div class="bd-notification is-primary has-text-centered">
+                                <i class="fab fa-linkedin fab-5x fab-lg"></i>
+                                <p class="block">
+                                    Jorgedipra
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class='LinkContat' :href='"https://www.youtube.com/jorgedipra"' target="_blank">
+                        <div class="column is-narrow">
+                            <div class="bd-notification is-primary has-text-centered">
+                                <i class="fab fa-youtube fab-5x fab-lg"></i>
+                                <p class="block">
+                                    Jorgedipra
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class='LinkContat' :href='"https://bitbucket.org/jorgedipra"' target="_blank">
+                        <div class="column is-narrow">
+                            <div class="bd-notification is-primary has-text-centered">
+                                <i class="fab fa-bitbucket fab-5x fab-lg"></i>
+                                <p class="block">
+                                    Jorgedipra
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class='LinkContat' :href='"https://es.stackoverflow.com/users/88046/jorgedipra"' target="_blank">
+                        <div class="column is-narrow">
+                            <div class="bd-notification is-primary has-text-centered">
+                                <i class="fab fa-stack-overflow fab-5x fab-lg"></i>
+                                <p class="block">
+                                    Jorgedipra
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class='LinkContat' :href='"https://codepen.io/jorgedipra"' target="_blank">
+                        <div class="column is-narrow">
+                            <div class="bd-notification is-primary has-text-centered">
+                                <i class="fab fa-codepen fab-5x fab-lg"></i>
+                                <p class="block">
+                                    Jorgedipra
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
 
             </div>
@@ -125,7 +141,9 @@ export default {
 div {
     border: none;
 }
-
+.LinkContat{
+    color: #e91e63;
+}
 .fab-lg {
     font-size: 100px;
 }
