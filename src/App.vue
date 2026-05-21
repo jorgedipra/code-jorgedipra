@@ -1,33 +1,17 @@
 <template>
-  <div class="container is-widescreen">
-    <CompHeader></CompHeader>
-      <router-view></router-view>
-    <CompFooter></CompFooter>
+  <div class="is-widescreen">
+    <router-view></router-view>
   </div>
 </template>
 
-
 <script>
-import CompHeader from './components/header.vue';
-import CompFooter from './components/footer.vue';
-
-export default {
-  data() {
-        return {
-            datos: {}
-        }
-    },
-    mounted() {
-    },
-  components: {
-    CompHeader,
-    CompFooter
-  }
-}
+export default {};
 </script>
 
 <style>
-div{
+@import './assets/styles/main.css';
+
+div {
   border: none;
 }
 </style>

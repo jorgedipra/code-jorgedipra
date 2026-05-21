@@ -1,63 +1,86 @@
 {
   "articulos": [
     {
-      "titulo": "Pagina",
+      "titulo": "Jorgedipra Portfolio",
+      "categoria": "web",
+      "descripcion": "Portfolio personal con Vue.js y Buefy",
       "linkText": "Jorgedipra",
       "linkText_1": "jorgedipra.com",
       "imageUrl": "./img/portafolio/page/jorgedipra.png",
       "imageUrl_1": "./img/portafolio/logo/jorgedipra.png",
       "externalLink": "https://github.com/jorgedipra/jorgedipra.github.io",
       "externalLink_1": "jorgedipra.github.io/"
-    },{
-      "titulo": "Pagina",
+    },
+    {
+      "titulo": "Cerlalc - Centro Regional para el Aprendizaje",
+      "categoria": "web",
+      "descripcion": "Institución cultural latinoamericana",
       "linkText": "Cerlalc",
       "linkText_1": "cerlalc.org",
       "imageUrl": "./img/portafolio/page/cerlalc.png",
       "imageUrl_1": "./img/portafolio/logo/cerlalc.png",
       "externalLink": "https://cerlalc.org/",
       "externalLink_1": "https://cerlalc.org/"
-    },{
-      "titulo": "Gestor ISBN",
+    },
+    {
+      "titulo": "Gestor ISBN - Cámara Ecuatoriana del Libro",
+      "categoria": "isbn",
+      "descripcion": "Sistema de gestión ISBN para editoriales",
       "linkText": "Cámara Ecuatoriana del Libro",
       "linkText_1": "isbnecuador.com",
       "imageUrl": "./img/portafolio/page/isbn.png",
       "imageUrl_1": "./img/portafolio/logo/isbn.png",
       "externalLink": "https://isbnecuador.com/",
       "externalLink_1": "https://isbnecuador.com/"
-    },{
-      "titulo": "Gestor ISBN",
+    },
+    {
+      "titulo": "Gestor ISBN - Cámara Venezolana del Libro",
+      "categoria": "isbn",
+      "descripcion": "Sistema de gestión ISBN para Venezuela",
       "linkText": "Cámara Venezolana del Libro",
       "linkText_1": "isbn.cenal.gob.ve",
       "imageUrl": "./img/portafolio/page/isbn.png",
       "imageUrl_1": "./img/portafolio/logo/isbn.png",
       "externalLink": "http://isbn.cenal.gob.ve/",
       "externalLink_1": "http://isbn.cenal.gob.ve/"
-    },{
-      "titulo": "Gestor ISBN",
+    },
+    {
+      "titulo": "Gestor ISBN - Cámara Chilena del Libro",
+      "categoria": "isbn",
+      "descripcion": "Sistema de gestión ISBN para Chile",
       "linkText": "Cámara Chilena del Libro",
       "linkText_1": "isbnchile.cl",
       "imageUrl": "./img/portafolio/page/isbn.png",
       "imageUrl_1": "./img/portafolio/logo/isbn.png",
       "externalLink": "https://isbnchile.cl/",
       "externalLink_1": "https://isbnchile.cl/"
-    },{
-      "titulo": "Cursos",
+    },
+    {
+      "titulo": "Aula Virtual Cerlalc",
+      "categoria": "cursos",
+      "descripcion": "Plataforma de cursos UNESCO",
       "linkText": "AULA VIRTUAL",
       "linkText_1": "aulavirtual.cerlalc.org",
       "imageUrl": "./img/portafolio/page/aulavirtual.png",
       "imageUrl_1": "./img/portafolio/logo/aulavirtual.png",
       "externalLink": "https://aulavirtual.cerlalc.org/",
       "externalLink_1": "https://aulavirtual.cerlalc.org/"
-    },{
-      "titulo": "Pagina",
+    },
+    {
+      "titulo": "Rescatando la Historia",
+      "categoria": "web",
+      "descripcion": "Proyecto cultural Cerlalc",
       "linkText": "Rescatandolahistoria",
       "linkText_1": "rescatandolahistoria.cerlalc.org",
       "imageUrl": "./img/portafolio/page/rescatandolahistoria.png",
       "imageUrl_1": "./img/portafolio/logo/rescatandolahistoria.png",
       "externalLink": "https://web.archive.org/web/20230328073126/https://rescatandolahistoria.cerlalc.org/",
       "externalLink_1": "https://web.archive.org/web/20230328073126/https://rescatandolahistoria.cerlalc.org/"
-    },{
-      "titulo": "Juego",
+    },
+    {
+      "titulo": "GAME-tank",
+      "categoria": "web",
+      "descripcion": "Juego interactivo HTML5",
       "linkText": "GAME-tank",
       "linkText_1": "GAME-tank.com",
       "imageUrl": "./img/portafolio/page/GAME-tank.png",
@@ -66,7 +89,9 @@
       "externalLink_1": "https://jorgedipra.github.io/GAME-tank/"
     },
     {
-      "titulo": "Finanzas",
+      "titulo": "Calculadora de Préstamos",
+      "categoria": "web",
+      "descripcion": "Herramienta de cálculo financiero",
       "linkText": "Calculadora_prestamos",
       "linkText_1": "Calculadora_prestamos.com",
       "imageUrl": "./img/portafolio/page/Calculadora_prestamos.png",
@@ -75,7 +100,9 @@
       "externalLink_1": "https://jorgedipra.github.io/Calculadora_prestamos/"
     },
     {
-      "titulo": "Proyectos",
+      "titulo": "MJPlay-v",
+      "categoria": "web",
+      "descripcion": "Reproductor de medios",
       "linkText": "MJPlay-v",
       "linkText_1": "mjplay-v.16mb.com",
       "imageUrl": "./img/portafolio/page/mjplay-v.png",
@@ -84,7 +111,9 @@
       "externalLink_1": "https://github.com/jorgedipra/Mjplayv"
     },
     {
-      "titulo": "Viajes",
+      "titulo": "Azca Cruceros",
+      "categoria": "web",
+      "descripcion": "Agencia de viajes y cruceros",
       "linkText": "Azca Cruceros",
       "linkText_1": "azcacruceros.com",
       "imageUrl": "./img/portafolio/page/azcacruceros.png",
@@ -93,7 +122,9 @@
       "externalLink_1": "https://azcacruceros.com/public/"
     },
     {
-      "titulo": "Cruceros",
+      "titulo": "Crucerum - Sistema de Cruceros",
+      "categoria": "web",
+      "descripcion": "Plataforma de reservas de cruceros",
       "linkText": "Crucerum.com",
       "linkText_1": "crucerum.com",
       "imageUrl": "./img/portafolio/page/crucerum.png",
@@ -102,7 +133,9 @@
       "externalLink_1": "https://www.crucerum.com/"
     },
     {
-      "titulo": "Canal de TV",
+      "titulo": "Glow Sky Networks - Canal de TV",
+      "categoria": "web",
+      "descripcion": "Plataforma de streaming TV",
       "linkText": "Glow Sky Networks",
       "linkText_1": "glowskyyoung.com",
       "imageUrl": "./img/portafolio/page/glowskyyoung.png",
@@ -111,7 +144,9 @@
       "externalLink_1": "https://github.com/jorgedipra/come"
     },
     {
-      "titulo": "Cursos",
+      "titulo": "La Unidad - Cursos",
+      "categoria": "cursos",
+      "descripcion": "Plataforma educativa",
       "linkText": "La Unidad",
       "linkText_1": "ugpp.cifooiss.org",
       "imageUrl": "./img/portafolio/page/LaUnidad.png",
@@ -120,7 +155,9 @@
       "externalLink_1": "https://web.archive.org/web/20180825151548/http://ugpp.cifooiss.org/"
     },
     {
-      "titulo": "Cursos",
+      "titulo": "SuperSalud - Cursos",
+      "categoria": "cursos",
+      "descripcion": "Portal de formación SuperSalud",
       "linkText": "SuperSalud",
       "linkText_1": "supersalud.cifooiss.org",
       "imageUrl": "./img/portafolio/page/SuperSalud.png",
@@ -129,7 +166,9 @@
       "externalLink_1": "https://web.archive.org/web/20180825151548/http://supersalud.cifooiss.org/"
     },
     {
-      "titulo": "Desarrollo",
+      "titulo": "SuperSalud Registro",
+      "categoria": "web",
+      "descripcion": "Sistema de registro SuperSalud",
       "linkText": "SuperSalud",
       "linkText_1": "supersaludregistro.cifooiss.com",
       "imageUrl": "./img/portafolio/page/supersaludregistro.png",
@@ -138,7 +177,9 @@
       "externalLink_1": "https://web.archive.org/web/20151211001518/http://supersaludregistro.cifooiss.com/"
     },
     {
-      "titulo": "Cursos",
+      "titulo": "Secretaría Distrital - Cursos",
+      "categoria": "cursos",
+      "descripcion": "Portal educativo Secretaría Distrital",
       "linkText": "Secretaría Distrital",
       "linkText_1": "sds.cifooiss.org",
       "imageUrl": "./img/portafolio/page/SecretariaDistrital.png",
@@ -147,7 +188,9 @@
       "externalLink_1": "https://web.archive.org/web/20180825151548/http://sds.cifooiss.org/"
     },
     {
-      "titulo": "Cursos",
+      "titulo": "Supersubsidio - Cursos",
+      "categoria": "cursos",
+      "descripcion": "Plataforma de formación Supersubsidio",
       "linkText": "Supersubsidio",
       "linkText_1": "supersubsidio2016.cifooiss.org",
       "imageUrl": "./img/portafolio/page/Supersubsidio.png",
@@ -156,7 +199,9 @@
       "externalLink_1": "https://web.archive.org/web/20180818224610/http://www.ssf.gov.co/wps/portal/ES/Inicio"
     },
     {
-      "titulo": "Informativa",
+      "titulo": "Plan Nacional de Seguridad y Salud",
+      "categoria": "cursos",
+      "descripcion": "Portal informativo ministerial",
       "linkText": "Plan Nacional",
       "linkText_1": "cifooiss.co/mintrabajo2017",
       "imageUrl": "./img/portafolio/page/PlanNacionaldeSeguridadySaludenelTrabajo20132021PNSST.png",
@@ -165,7 +210,9 @@
       "externalLink_1": "https://web.archive.org/web/20180825151548/http://cifooiss.co/mintrabajo2017"
     },
     {
-      "titulo": "Informativo",
+      "titulo": "Formalización Laboral",
+      "categoria": "cursos",
+      "descripcion": "Portal informativo laboral",
       "linkText": "Formalización laboral",
       "linkText_1": "formalizacionlaboral.org",
       "imageUrl": "./img/portafolio/page/formalizacionlaboral.png",
@@ -174,7 +221,9 @@
       "externalLink_1": "https://web.archive.org/web/20161004102513/http://formalizacionlaboral.org/"
     },
     {
-      "titulo": "Informativo",
+      "titulo": "Estrategia y Conocimiento",
+      "categoria": "cursos",
+      "descripcion": "Portal de formación estratégica",
       "linkText": "Estratco",
       "linkText_1": "estrategiayconocimiento.com",
       "imageUrl": "./img/portafolio/page/Estratco.png",
@@ -183,7 +232,9 @@
       "externalLink_1": "https://web.archive.org/web/20180825151548/http://estrategiayconocimiento.com/"
     },
     {
-      "titulo": "Comunicación",
+      "titulo": "El Observatorio - Comunicación",
+      "categoria": "cursos",
+      "descripcion": "Revista iberoamericana",
       "linkText": "El Observatorio",
       "linkText_1": "revisaiberoamerica.org",
       "imageUrl": "./img/portafolio/page/ElObservatorio.png",
@@ -192,7 +243,9 @@
       "externalLink_1": "https://web.archive.org/web/20170527060207/http://revisaiberoamerica.org/new2home/index.php/es/"
     },
     {
-      "titulo": "Preproducción",
+      "titulo": "Proyectos Cifooiss",
+      "categoria": "web",
+      "descripcion": "Gestor de proyectos",
       "linkText": "Proyectos",
       "linkText_1": "cifooiss.com",
       "imageUrl": "./img/portafolio/page/Proyectos.png",
@@ -201,7 +254,9 @@
       "externalLink_1": "https://web.archive.org/web/20180823221437/http://cifooiss.com/v3/#/Cifooiss"
     },
     {
-      "titulo": "Informativa",
+      "titulo": "Cifooiss",
+      "categoria": "web",
+      "descripcion": "Portal informativo Cifooiss",
       "linkText": "Cifooiss",
       "linkText_1": "cifooiss.org",
       "imageUrl": "./img/portafolio/page/cifooiss.png",
@@ -210,7 +265,9 @@
       "externalLink_1": "https://web.archive.org/web/20161003183047/http://cifooiss.com/"
     },
     {
-      "titulo": "Cursos",
+      "titulo": "Mintrabajo 2017 - Cursos",
+      "categoria": "cursos",
+      "descripcion": "Portal formativo Mintrabajo 2017",
       "linkText": "Mintrabajo2017",
       "linkText_1": "mintrabajo2017.cifooiss.org",
       "imageUrl": "./img/portafolio/page/mintrabajo2016.png",
@@ -219,7 +276,9 @@
       "externalLink_1": "https://web.archive.org/web/20171027015458/http://mintrabajo2017.cifooiss.org/"
     },
     {
-      "titulo": "Cursos",
+      "titulo": "Mintrabajo 2016 - Cursos",
+      "categoria": "cursos",
+      "descripcion": "Portal formativo Mintrabajo 2016",
       "linkText": "Mintrabajo2016",
       "linkText_1": "mintrabajo.cifooiss.org",
       "imageUrl": "./img/portafolio/page/Mintrabajo2015.png",
@@ -228,7 +287,9 @@
       "externalLink_1": "https://web.archive.org/web/20170504131700/http://mintrabajo.cifooiss.org/"
     },
     {
-      "titulo": "Cursos",
+      "titulo": "Mintrabajo 2015 - Cursos",
+      "categoria": "cursos",
+      "descripcion": "Portal formativo Mintrabajo 2015",
       "linkText": "Mintrabajo2015",
       "linkText_1": "campus.cifooiss.org",
       "imageUrl": "./img/portafolio/page/Mintrabajo2015.png",
@@ -237,7 +298,9 @@
       "externalLink_1": "https://web.archive.org/web/20200511215602/http://campus.cifooiss.org/"
     },
     {
-      "titulo": "Pruebas",
+      "titulo": "Ingeniería - Pruebas",
+      "categoria": "web",
+      "descripcion": "Sistema de pruebas ingeniería",
       "linkText": "Ingenieria",
       "linkText_1": "ingenieria.cifooiss.com",
       "imageUrl": "./img/portafolio/page/Ingenieria.png",
@@ -246,17 +309,20 @@
       "externalLink_1": "https://web.archive.org/web/20180823221437/http://cifooiss.com/v3/#/Cifooiss"
     },
     {
-      "titulo": "Cursos",
+      "titulo": "Promedco - Cursos",
+      "categoria": "cursos",
+      "descripcion": "Portal formativo Promedco",
       "linkText": "Promedco",
       "linkText_1": "promedco.estrategiayconocimiento.com",
       "imageUrl": "./img/portafolio/page/Promedco.png",
       "imageUrl_1": "./img/portafolio/logo/Promedco.png",
       "externalLink": "https://web.archive.org/web/20180825151548/http://promedco.estrategiayconocimiento.com/",
       "externalLink_1": "https://web.archive.org/web/20180825151548/http://promedco.estrategiayconocimiento.com/"
-    }
-    ,
+    },
     {
-      "titulo": "Cursos",
+      "titulo": "Bookpro-v - Plantilla de Cursos",
+      "categoria": "cursos",
+      "descripcion": "Plantilla responsive para cursos",
       "linkText": "Bookpro-v (Plantilla)",
       "linkText_1": "bookpro-v.com",
       "imageUrl": "./img/portafolio/page/Bookpro-v.png",
@@ -265,7 +331,9 @@
       "externalLink_1": "https://jorgedipra.github.io/bookpro-v/"
     },
     {
-      "titulo": "Desarrollo",
+      "titulo": "Cassius - Plataforma PH",
+      "categoria": "web",
+      "descripcion": "Plataforma de gestión PH",
       "linkText": "cassius",
       "linkText_1": "cassiusph.com",
       "imageUrl": "./img/portafolio/page/cassius.png",
@@ -274,7 +342,9 @@
       "externalLink_1": "https://web.archive.org/web/20140901094602/http://www.cassiusph.com/"
     },
     {
-      "titulo": "Repositorio",
+      "titulo": "Intranet - Repositorio",
+      "categoria": "repositorio",
+      "descripcion": "Sistema de intranet",
       "linkText": "intranet",
       "linkText_1": "intranet.com",
       "imageUrl": "./img/portafolio/page/repositrio.png",
@@ -283,7 +353,9 @@
       "externalLink_1": "https://github.com/jorgedipra/intranet"
     },
     {
-      "titulo": "Repositorio",
+      "titulo": "code-jorgedipra",
+      "categoria": "repositorio",
+      "descripcion": "Código fuente del portfolio",
       "linkText": "code-jorgedipra",
       "linkText_1": "code-jorgedipra.com",
       "imageUrl": "./img/portafolio/page/repositrio.png",
@@ -292,7 +364,9 @@
       "externalLink_1": "https://github.com/jorgedipra/code-jorgedipra"
     },
     {
-      "titulo": "Repositorio",
+      "titulo": "Mini-Framework",
+      "categoria": "repositorio",
+      "descripcion": "Framework minimalista PHP",
       "linkText": "mini-framework",
       "linkText_1": "mini-framework.com",
       "imageUrl": "./img/portafolio/page/repositrio.png",
@@ -301,7 +375,9 @@
       "externalLink_1": "https://github.com/jorgedipra/mini-framework"
     },
     {
-      "titulo": "Repositorio",
+      "titulo": "Console Asistente",
+      "categoria": "repositorio",
+      "descripcion": "Asistente de consola Windows",
       "linkText": "ConsoleAsistente",
       "linkText_1": "ConsoleAsistente.com",
       "imageUrl": "./img/portafolio/page/repositrio.png",

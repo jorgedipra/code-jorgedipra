@@ -6,6 +6,6 @@ import '@ntohq/buefy-next/dist/buefy.css'; // Importa los estilos de Buefy
 import '@fortawesome/fontawesome-free/css/all.css';
 
 createApp(App)
-    .use(router) // Usa las rutas en la aplicación Vue
-    .use(Buefy)
-    .mount('#app');
+  .use(router) // Usa las rutas en la aplicación Vue
+  .use(Buefy)
+  .mount('#app');
