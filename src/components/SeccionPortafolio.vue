@@ -34,8 +34,16 @@
           class="filter-btn"
           :class="{ active: activeFilter === 'cursos' }"
           @click="setFilter('cursos')"
+          v-if="false"
         >
           Cursos
+        </button>
+        <button
+          class="filter-btn"
+          :class="{ active: activeFilter === 'educativas' }"
+          @click="setFilter('educativas')"
+        >
+          Educativas
         </button>
         <button
           class="filter-btn"
@@ -67,7 +75,10 @@
                 {{ articulo.linkText_1 }}
               </a>
               <a
-                v-if="articulo.externalLink_1"
+                v-if="
+                  articulo.externalLink_1 &&
+                  (articulo.categoria === 'repositorio' || articulo.categoria === 'personal')
+                "
                 :href="articulo.externalLink_1"
                 target="_blank"
                 class="portfolio-link"
@@ -102,13 +113,18 @@ export default {
       );
     }
   },
-  mounted() {
-    fetch('./data.json')
-      .then((response) => response.json())
-      .then((data) => (this.datos = data))
-      .catch((error) => console.error('Error al cargar los datos:', error));
+  async mounted() {
+    try {
+      const response = await fetch('./data.json');
+      if (!response.ok) throw new Error('Network response was not ok');
+      this.datos = await response.json();
+    } catch (error) {
+      console.error('Error al cargar los datos:', error);
+    }
 
-    this.setupScrollAnimations();
+    this.$nextTick(() => {
+      this.setupScrollAnimations();
+    });
   },
   methods: {
     setFilter(filter) {
@@ -122,6 +138,7 @@ export default {
         web: 'Web',
         isbn: 'ISBN',
         cursos: 'Cursos',
+        educativas: 'Educativas',
         repositorio: 'Repositorio'
       };
       return labels[categoria] || categoria;
@@ -235,6 +252,10 @@ export default {
 
 .portfolio-badge.badge-repositorio {
   background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.portfolio-badge.badge-educativas {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
 }
 
 .portfolio-title {
