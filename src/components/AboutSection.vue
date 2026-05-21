@@ -15,32 +15,6 @@
             <h4>10+ Años</h4>
             <p>de experiencia</p>
           </div>
-        </div>
-        <div class="about-content animate-on-scroll">
-          <h3>Desarrollador Full-Stack en Cerlalc-Unesco</h3>
-          <p>
-            Especialista en desarrollo web con más de 12 años de experiencia construyendo soluciones
-            robustas en PHP, Laravel y Vue.js. He trabajado con clientes internacionales como
-            Cerlalc y los sistemas Gestor ISBN de las Cámaras del Libro de Ecuador, Venezuela y
-            Chile, así como para entidades públicas colombianas como SuperSalud, el Ministerio de
-            Trabajo y la Secretaría Distrital de Bogotá. Actualmente activo en Cerlalc.
-          </p>
-          <p>
-            Disponible para proyectos en modalidad freelance o prestación de servicios, ofreciendo
-            soluciones personalizadas que combinan funcionalidad, escalabilidad y mejores prácticas
-            de desarrollo.
-          </p>
-          <div class="skills-grid">
-            <div class="skill-item" v-for="skill in skills" :key="skill.name">
-              <div class="skill-header">
-                <span class="skill-name">{{ skill.name }}</span>
-                <span class="skill-percent">{{ skill.percent }}%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" :style="{ width: skill.percent + '%' }"></div>
-              </div>
-            </div>
-          </div>
           <div class="tech-categories">
             <div class="tech-category">
               <h4><b-icon pack="fas" icon="code" size="is-small"></b-icon> Stack Principal</h4>
@@ -100,6 +74,32 @@
             </div>
           </div>
         </div>
+        <div class="about-content animate-on-scroll">
+          <h3>Desarrollador Full-Stack en Cerlalc-Unesco</h3>
+          <p>
+            Especialista en desarrollo web con más de 12 años de experiencia construyendo soluciones
+            robustas en PHP, Laravel y Vue.js. He trabajado con clientes internacionales como
+            Cerlalc y los sistemas Gestor ISBN de las Cámaras del Libro de Ecuador, Venezuela y
+            Chile, así como para entidades públicas colombianas como SuperSalud, el Ministerio de
+            Trabajo y la Secretaría Distrital de Bogotá. Actualmente activo en Cerlalc.
+          </p>
+          <p>
+            Disponible para proyectos en modalidad freelance o prestación de servicios, ofreciendo
+            soluciones personalizadas que combinan funcionalidad, escalabilidad y mejores prácticas
+            de desarrollo.
+          </p>
+          <div class="skills-grid">
+            <div class="skill-item" v-for="skill in skills" :key="skill.name">
+              <div class="skill-header">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-percent">{{ skill.percent }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" :style="{ width: skill.percent + '%' }"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -149,12 +149,13 @@ export default {
 
 .about-overlay {
   position: absolute;
-  bottom: -2rem;
+  top: -2rem;
   right: -2rem;
   background: var(--gradient-primary);
   padding: 1.5rem 2rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-xl);
+  z-index: 10;
 }
 
 .about-overlay h4 {
@@ -232,15 +233,15 @@ export default {
 
 .tech-categories {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 5rem;
 }
 
 .tech-category {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: var(--radius-md);
 }
 
@@ -248,9 +249,9 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .tech-tags {
@@ -261,9 +262,9 @@ export default {
 
 .tech-tag {
   background: var(--gradient-primary);
-  padding: 0.4rem 0.8rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 20px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
 }
 
@@ -278,6 +279,17 @@ export default {
     right: auto;
     margin-top: 1rem;
     display: inline-block;
+  }
+
+  .tech-categories {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-categories {
+    grid-template-columns: 1fr;
   }
 }
 </style>
