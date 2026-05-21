@@ -28,10 +28,6 @@
               <b-icon pack="fab" icon="twitter" size="is-large"></b-icon>
               <span>Twitter</span>
             </a>
-            <a href="mailto:jorgedipra@example.com" class="contact-card">
-              <b-icon pack="fas" icon="envelope" size="is-large"></b-icon>
-              <span>Email</span>
-            </a>
           </div>
         </div>
         <div class="contact-form-container animate-on-scroll">

@@ -98,7 +98,7 @@ export default {
 }
 
 .navbar-link {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   color: var(--gray-300);
   text-decoration: none;
   font-weight: 500;

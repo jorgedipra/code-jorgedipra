@@ -47,7 +47,6 @@
           <div class="footer-col">
             <h4>Contacto</h4>
             <ul class="footer-links">
-              <li><a href="mailto:jorgedipra@example.com">jorgedipra@example.com</a></li>
               <li><a href="#">Bogotá, Colombia</a></li>
             </ul>
           </div>
