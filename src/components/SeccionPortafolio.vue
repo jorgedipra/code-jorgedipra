@@ -1,196 +1,278 @@
 <template>
-    <div id="portafolio" class="container is-widescreen">
-        <br>
-        <div class="columns">
-            <div class="column is-1"></div>
-            <div class="column">
-                <h2 class="title">
-                    <span class="icon-text">
-                        <span class="icon">
-                            <b-icon pack="fas" icon="folder" type="is-navis-danger"></b-icon>
-                        </span>
-                        <span>Portafolio</span>
-                    </span>
-                </h2>
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Portafolio</span>
+        <h2 class="section-title">Proyectos destacados</h2>
+        <p class="section-subtitle">
+          Una selección de trabajos que representan mi experiencia y pasión.
+        </p>
+      </div>
+      <div class="portfolio-filters">
+        <button
+          class="filter-btn"
+          :class="{ active: activeFilter === 'all' }"
+          @click="setFilter('all')"
+        >
+          Todos
+        </button>
+        <button
+          class="filter-btn"
+          :class="{ active: activeFilter === 'web' }"
+          @click="setFilter('web')"
+        >
+          Web
+        </button>
+        <button
+          class="filter-btn"
+          :class="{ active: activeFilter === 'isbn' }"
+          @click="setFilter('isbn')"
+        >
+          ISBN
+        </button>
+        <button
+          class="filter-btn"
+          :class="{ active: activeFilter === 'cursos' }"
+          @click="setFilter('cursos')"
+        >
+          Cursos
+        </button>
+        <button
+          class="filter-btn"
+          :class="{ active: activeFilter === 'repositorio' }"
+          @click="setFilter('repositorio')"
+        >
+          Repositorio
+        </button>
+      </div>
+      <div class="portfolio-grid">
+        <article
+          class="portfolio-card animate-on-scroll"
+          v-for="(articulo, index) in filteredArticulos"
+          :key="index"
+        >
+          <div
+            class="portfolio-image"
+            :style="{ backgroundImage: 'url(' + articulo.imageUrl + ')' }"
+          ></div>
+          <div class="portfolio-body">
+            <span class="portfolio-badge" :class="'badge-' + articulo.categoria">{{
+              getCategoryLabel(articulo.categoria)
+            }}</span>
+            <h3 class="portfolio-title">{{ articulo.titulo }}</h3>
+            <p class="portfolio-description">{{ articulo.descripcion }}</p>
+            <div class="portfolio-links">
+              <a :href="articulo.externalLink" target="_blank" class="portfolio-link">
+                <b-icon pack="fas" icon="external-link-alt" size="is-small"></b-icon>
+                {{ articulo.linkText_1 }}
+              </a>
+              <a
+                v-if="articulo.externalLink_1"
+                :href="articulo.externalLink_1"
+                target="_blank"
+                class="portfolio-link"
+              >
+                <b-icon pack="fab" icon="github" size="is-small"></b-icon>
+                Ver código
+              </a>
             </div>
-        </div>
-        <hr>
-        <div class="columns">
-            <div class="column is-12">
-                <div class="columns is-mobile is-multiline is-centered">
-
-                    <div class="column is-narrow card-row" v-for="(articulo, index) in datos.articulos" :key="index">
-                        <article class="tablet" :style="{ 'background-image': 'url(' + articulo.imageUrl + ')' }">
-                            <aside class="imgLogo" :style="{ 'background-image': 'url(' + articulo.imageUrl_1 + ')' }">
-                            </aside>
-                            <div class="text">
-                                <h5>{{ articulo.titulo }}</h5>
-                                <h2><a :href="articulo.externalLink" target="_blank">{{ articulo.linkText }}</a></h2>
-                                <h4><a :href="articulo.externalLink_1" target="_blank">{{ articulo.linkText_1 }}</a>
-                                </h4>
-                            </div>
-                            <span class="fondo-1"></span>
-                            <span class="fondo-4" style="background-color: #8BC34A"></span>
-                            <span class="fondo-3" style="border-top: 130px solid #8BC34A"></span>
-                        </article>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+          </div>
+        </article>
+      </div>
     </div>
+  </section>
 </template>
 
 <script>
-
 export default {
-    data() {
-        return {
-            datos: {}
-        }
-    },
-    mounted() {
-        fetch('./data.json')
-            .then(response => response.json())
-            .then(data => this.datos = data)
-            .catch(error => console.error('Error al cargar los datos:', error));
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var portafolioLink = document.getElementById('portafolioLink');
-
-            portafolioLink.addEventListener('click', function (event) {
-                event.preventDefault(); // Evita que el enlace realice la acción por defecto
-
-                var portafolioSection = document.getElementById('portafolio');
-                portafolioSection.scrollIntoView({ behavior: 'smooth' }); // Desplaza suavemente hasta la sección de contacto
-            });
-        });
-
+  name: 'SeccionPortafolio',
+  data() {
+    return {
+      datos: {},
+      activeFilter: 'all'
+    };
+  },
+  computed: {
+    filteredArticulos() {
+      if (this.activeFilter === 'all') {
+        return this.datos.articulos || [];
+      }
+      return (this.datos.articulos || []).filter(
+        (articulo) => articulo.categoria === this.activeFilter
+      );
     }
-}
+  },
+  mounted() {
+    fetch('./data.json')
+      .then((response) => response.json())
+      .then((data) => (this.datos = data))
+      .catch((error) => console.error('Error al cargar los datos:', error));
+
+    this.setupScrollAnimations();
+  },
+  methods: {
+    setFilter(filter) {
+      this.activeFilter = filter;
+      this.$nextTick(() => {
+        this.setupScrollAnimations();
+      });
+    },
+    getCategoryLabel(categoria) {
+      const labels = {
+        web: 'Web',
+        isbn: 'ISBN',
+        cursos: 'Cursos',
+        repositorio: 'Repositorio'
+      };
+      return labels[categoria] || categoria;
+    },
+    setupScrollAnimations() {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      this.$nextTick(() => {
+        document.querySelectorAll('.portfolio-section .animate-on-scroll').forEach((el) => {
+          observer.observe(el);
+        });
+      });
+    }
+  }
+};
 </script>
 
-<style>
-div {
-    border: none;
+<style scoped>
+.portfolio-section {
+  padding: 6rem 0;
+  background: var(--dark);
 }
 
-.fab-lg {
-    font-size: 100px;
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
 }
 
-.tablet {
-    border-radius: 1px;
-    border: 1px solid #4a4a4a;
-
-    display: grid;
-    grid-template-columns: 130px auto;
-    height: 132px;
-    width: 330px;
+.filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--gray-300);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
-.tablet .imgLogo {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 100%;
-    border: solid 1px #bdbdbd;
-    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    height: 100px;
-    margin: 17px;
-    position: relative;
-    width: 100px;
-    z-index: 1;
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
 }
 
-.tablet .text {
-    color: #fff;
-    display: grid;
-    grid-column: 2;
-    grid-template-rows: 17px 25px 37px 20px 25px auto;
-    grid-template-columns: 200px;
-    height: 130px;
-    position: initial;
-    width: 200px;
-    z-index: 1;
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
 }
 
-.tablet .text h5 {
-    grid-row: 2;
-    color: #212121;
-    font-weight: 500;
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
 }
 
-.tablet .text h2 {
-    grid-row: 3;
-    white-space: nowrap;
-    width: 8.3em;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    height: 40px;
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.tablet .text h2 a {
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 92%;
+.portfolio-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--gray-700);
 }
 
-.tablet .text h4 {
-    grid-row: 5;
-    height: 28px;
-    margin-right: 15px;
-    text-align: right;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 8.2em;
-    overflow: hidden;
+.portfolio-body {
+  padding: 1.5rem;
 }
 
-.tablet .text h4 a {
-    color: #fff;
-    font-weight: 500;
-    font-size: 95%;
-    padding-right: 0px;
-    text-align: right;
-    margin-left: 11px;
+.portfolio-badge {
+  display: inline-block;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
 }
 
-.tablet .fondo-1 {
-    background: #212121;
-    border-radius: 2px;
-    -webkit-filter: sepia(100%);
-    filter: sepia(100%);
-    height: 130px;
-    margin-left: 130px;
-    opacity: 0.5;
-    position: absolute;
-    width: 200px;
-    z-index: 0;
+.portfolio-badge.badge-isbn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
 }
 
-.tablet .fondo-4 {
-    border-radius: 2px 0px 0px 2px;
-    height: 130px;
-    position: absolute;
-    width: 130px;
-    z-index: 0;
+.portfolio-badge.badge-cursos {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
 }
 
-.tablet .fondo-3 {
-    border-right: 120px solid transparent;
-    height: 0;
-    margin-left: 130px;
-    position: absolute;
-    width: 0;
-    z-index: 0;
+.portfolio-badge.badge-repositorio {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
 }
 
-.card-row {
-    padding: 5px !important;
+.portfolio-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-description {
+  color: var(--gray-500);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.portfolio-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.portfolio-link {
+  color: var(--gray-500);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.portfolio-link:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
