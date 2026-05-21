@@ -1,5 +1,5 @@
 <template>
-  <section class="timeline-section">
+  <section class="timeline-section" id="experience">
     <div class="container">
       <div class="section-header animate-on-scroll">
         <span class="section-tag">Experiencia</span>
@@ -19,14 +19,20 @@
             <span class="timeline-year">{{ item.year }}</span>
             <h4>{{ item.subtitle }}</h4>
             <h3>{{ item.title }}</h3>
-            <p>{{ item.description }}</p>
+            <p v-if="expandedItems[index]">{{ item.description }}</p>
+            <button class="expand-btn" @click="toggleExpand(index)">
+              {{ expandedItems[index] ? 'Leer menos' : 'Leer más' }}
+            </button>
           </div>
           <div class="timeline-dot"></div>
           <div class="timeline-content" v-if="index % 2 === 1">
             <span class="timeline-year">{{ item.year }}</span>
             <h4>{{ item.subtitle }}</h4>
             <h3>{{ item.title }}</h3>
-            <p>{{ item.description }}</p>
+            <p v-if="expandedItems[index]">{{ item.description }}</p>
+            <button class="expand-btn" @click="toggleExpand(index)">
+              {{ expandedItems[index] ? 'Leer menos' : 'Leer más' }}
+            </button>
           </div>
         </div>
       </div>
@@ -39,29 +45,51 @@ export default {
   name: 'TimelineSection',
   data() {
     return {
-      timelineItems: [
-        {
-          year: '2020 - Presente',
-          title: 'Cerlalc-Unesco',
-          subtitle: 'Desarrollador Master',
-          description:
-            'Liderando proyectos de transformación digital para instituciones culturales latinoamericanas.'
-        },
-        {
-          year: '2015 - 2020',
-          title: 'Freelance',
-          subtitle: 'Desarrollador Senior',
-          description:
-            'Desarrollo de aplicaciones web para clientes internacionales en múltiples industrias.'
-        },
-        {
-          year: '2012 - 2015',
-          title: 'Agencia Digital',
-          subtitle: 'Desarrollador Junior',
-          description: 'Desarrollo de sitios web responsivos y aplicaciones interactivas para PYME.'
-        }
-      ]
+      datos: {},
+      expandedItems: {}
     };
+  },
+  computed: {
+    timelineItems() {
+      return this.datos.experiences || [];
+    }
+  },
+  async mounted() {
+    try {
+      const response = await fetch('./data/timeline.json');
+      if (!response.ok) throw new Error('Network response was not ok');
+      const data = await response.json();
+      this.datos = data;
+    } catch (error) {
+      console.error('Error al cargar los datos:', error);
+    }
+
+    this.$nextTick(() => {
+      this.setupScrollAnimations();
+    });
+  },
+  methods: {
+    toggleExpand(index) {
+      this.expandedItems[index] = !this.expandedItems[index];
+    },
+    setupScrollAnimations() {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      this.$nextTick(() => {
+        document.querySelectorAll('.timeline-section .animate-on-scroll').forEach((el) => {
+          observer.observe(el);
+        });
+      });
+    }
   }
 };
 </script>
@@ -137,6 +165,7 @@ export default {
 .timeline-content p {
   color: var(--gray-500);
   font-size: 0.9rem;
+  white-space: pre-line;
 }
 
 .timeline-year {
@@ -145,6 +174,23 @@ export default {
   font-weight: 600;
   margin-bottom: 0.5rem;
   display: block;
+}
+
+.expand-btn {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+}
+
+.expand-btn:hover {
+  background: var(--primary);
+  color: white;
 }
 
 @media (max-width: 768px) {

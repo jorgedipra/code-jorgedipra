@@ -7,8 +7,8 @@
       </a>
       <div class="navbar-menu">
         <a href="#about" class="navbar-link">Sobre mí</a>
+        <a href="#experience" class="navbar-link">Experiencia</a>
         <a href="#portfolio" class="navbar-link">Portafolio</a>
-        <a href="#services" class="navbar-link">Servicios</a>
         <a href="#contact" class="navbar-link">Contacto</a>
         <a href="https://github.com/jorgedipra" target="_blank" class="navbar-link navbar-cta">
           <b-icon pack="fab" icon="github" size="is-small"></b-icon>
