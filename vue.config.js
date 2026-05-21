@@ -1,5 +1,3 @@
-const { defineConfig } = require('@vue/cli-service')
-// vue.config.js
 module.exports = {
   chainWebpack: (config) => {
     config.plugin('define').tap((definitions) => {
