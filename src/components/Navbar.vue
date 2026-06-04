@@ -121,6 +121,7 @@ export default {
   padding: 0.5rem 1.25rem;
   border-radius: var(--radius-sm);
   margin-left: 0.5rem;
+  width: 120px;
 }
 
 .navbar-cta:hover {
